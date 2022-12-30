@@ -5,8 +5,10 @@ window.onload = function () {
   const result = document.getElementById("result");
   const guesses = document.getElementById("guesses");
   const reset = document.getElementById("reset");
+  const hintButton = document.getElementById("hint");
   let guessCount = 1;
-  let guessMax = 6;
+  let guessMax = 5;
+
   const checkGuess = () => {
     if (guess.value == answer) {
       result.innerHTML = "Correct!";
@@ -24,27 +26,40 @@ window.onload = function () {
   const guessCountList = () => {
     if (guessCount === guessMax) {
       result.innerHTML = "You ran out of guesses.";
+      guesses.innerHTML += `<li>${guess.value}</li>`;
       guess.disabled = true;
       submit.disabled = true;
+      hintButton.disabled = true;
       return;
     }
-
-    guesses.innerHTML += `<li>${guess.value}</li>`;
-
     guessCount++;
+    guesses.innerHTML += `<li>${guess.value}</li>`;
   };
   const resetGame = () => {
     guessCount = 1;
     guesses.innerHTML = "";
     result.innerHTML = "";
     guess.value = "";
+    submit.disabled = false;
+    hintButton.disabled = false;
+
     answer = Math.floor(Math.random() * 100) + 1;
+  };
+  const hint = () => {
+    if (answer % 2 === 0) {
+      result.innerHTML = "The answer is even";
+    } else {
+      result.innerHTML = "The answer is odd";
+    }
+    hintButton.disabled = true;
   };
   submit.addEventListener("click", () => {
     console.log(guess.value, answer, guessCount);
     checkGuess();
     guessCountList();
+    guess.value = "";
   });
 
   reset.addEventListener("click", resetGame);
+  hintButton.addEventListener("click", hint);
 };
