@@ -6,6 +6,7 @@ window.onload = function () {
   const guesses = document.getElementById("guesses");
   const reset = document.getElementById("reset");
   const hintButton = document.getElementById("hint");
+  const hintOutput = document.getElementById("hintResult");
   let guessCount = 1;
   let guessMax = 5;
 
@@ -46,11 +47,14 @@ window.onload = function () {
     answer = Math.floor(Math.random() * 100) + 1;
   };
   const hint = () => {
-    if (answer % 2 === 0) {
-      result.innerHTML = "The answer is even";
-    } else {
-      result.innerHTML = "The answer is odd";
-    }
+    let hintArray = [
+      answer,
+      Math.floor(Math.random() * 100) + 1,
+      Math.floor(Math.random() * 100) + 1,
+    ];
+
+    hintOutput.innerHTML = "One of these numbers is the answer: " + hintArray;
+
     hintButton.disabled = true;
   };
   submit.addEventListener("click", () => {
