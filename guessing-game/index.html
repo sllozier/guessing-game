@@ -9,21 +9,58 @@
     <title>Guessing Game</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Guessing Game</h1>
-      <p>Guess a number between 1 and 100</p>
-      <label for="guess" />
-      <input type="number" id="guess" />
-      <div id="guessInput">
-        <button type="button" id="submit">Submit</button>
-        <label for="reset" />
-        <button type="button" id="reset">Reset</button>
-        <label for="hint" />
-        <button type="button" id="hint">Hint</button>
+    <div id="app" class="container center overlay">
+      <div id="header">
+        <h1 id="title" class="center">Guessing Game</h1>
+        <h3 id="subtitle" class="center">Guess a number between 1 - 100</h3>
       </div>
-      <p id="hintResult"></p>
-      <p id="result"></p>
-      <p id="guesses"></p>
+      <div id="main">
+        <div id="input-parent">
+          <input
+            id="player-input"
+            class="center"
+            placeholder="Type Guess Here"
+          />
+          <button id="submit" class="btn subBtn">Submit</button>
+        </div>
+      </div>
+      <div id="guesses">
+        <ul id="guess-list">
+          <li class="guess">
+            <a href="#" class="show-option" title="Guess will appear here">
+              <i>‒</i>
+            </a>
+          </li>
+          <li class="guess">
+            <a href="#" class="show-option" title="Guess will appear here">
+              <i>‒</i>
+            </a>
+          </li>
+          <li class="guess">
+            <a href="#" class="show-option" title="Guess will appear here">
+              <i>‒</i>
+            </a>
+          </li>
+          <li class="guess">
+            <a href="#" class="show-option" title="Guess will appear here">
+              <i>‒</i>
+            </a>
+          </li>
+          <li class="guess">
+            <a href="#" class="show-option" title="Guess will appear here">
+              <i>‒</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="menu-buttons">
+        <button type="button" id="reset" class="btn my-btn resetBtn">
+          RESET THE GAME
+        </button>
+        <button type="button" id="hint" class="btn my-btn hintBtn">
+          NEED A HINT?
+        </button>
+      </div>
     </div>
   </body>
 </html>
