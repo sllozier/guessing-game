@@ -1,3 +1,4 @@
+/***** Main Styling *****/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +13,8 @@ body {
   text-align: left;
   background-color: white;
 }
+
+/***** Single Element Styling *****/
 h1 {
   font-size: 45px;
 }
@@ -19,7 +22,27 @@ h3 {
   font-size: 17px;
   padding-top: 10px;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+img {
+  display: inline;
+  width: 155.7632px;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  text-decoration: none;
+  color: #4c5b56;
+}
 
+/***** Class Name Styling *****/
 .container {
   width: 800px;
   height: 800px;
@@ -29,8 +52,11 @@ h3 {
   margin-left: auto;
   border-radius: 50%;
   text-align: center;
+  margin-bottom: 10rem;
 }
 
+/*This overlay was fun to do! Check out this link about animations:
+ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations */
 .overlay {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -52,53 +78,6 @@ h3 {
 
 .center {
   text-align: center;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-img {
-  display: inline;
-  width: 200px;
-  height: auto;
-}
-
-#header {
-  margin-top: 7rem;
-}
-
-#copyright {
-  width: auto;
-  max-width: 3%;
-  height: auto;
-}
-
-#github {
-  width: auto;
-  max-width: 4%;
-  height: auto;
-}
-
-#footer {
-  color: black;
-  width: 100%;
-  border-top: solid 2px white;
-  background-color: white;
-  position: fixed;
-  bottom: 0;
-}
-
-/*****************BUTTONS AND INPUT*************/
-a {
-  text-decoration: none;
-  background-color: transparent;
-}
-a:hover {
-  text-decoration: none;
-  color: #4c5b56;
 }
 
 .btn {
@@ -161,6 +140,63 @@ a:hover {
   margin: 0 10px;
 }
 
+.my-btn {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.show-option {
+  color: #f8f8ff;
+}
+
+.my-btn,
+.guess {
+  box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.62);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.col-sm-4 {
+  width: 155.7632px;
+  min-height: 1px;
+  padding-right: 45px;
+  padding-left: 15px;
+}
+/***** ID styling *****/
+#header {
+  margin-top: 7rem;
+}
+
+#copyright {
+  width: auto;
+  max-width: 3%;
+  height: auto;
+}
+
+#github {
+  width: auto;
+  max-width: 4%;
+  height: auto;
+}
+
+#footer {
+  color: black;
+  width: 100%;
+  border-top: solid 2px white;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+}
+
 #guesses {
   margin-top: 3rem;
   margin-bottom: 35px;
@@ -180,10 +216,6 @@ a:hover {
 #menu-buttons {
   padding-bottom: 20px;
 }
-.my-btn {
-  margin-left: 6px;
-  margin-right: 6px;
-}
 
 #player-input {
   opacity: 0.6;
@@ -197,7 +229,7 @@ a:hover {
 
 #prjname {
   color: #4c5b56;
-  font-size: 15px;
+  font-size: 12px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -211,21 +243,12 @@ a:hover {
   left: 110px;
 }
 
-.show-option {
-  color: #f8f8ff;
-}
-
-.my-btn,
 #submit,
-#players-input,
-.guess {
-  -webkit-box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.62);
-  -moz-box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.62);
+#players-input {
   box-shadow: 0px 7px 10px -4px rgba(0, 0, 0, 0.62);
 }
 
-/************** Media Queries *****************/
-
+/***** Media Queries *****/
 @media (max-width: 992px) {
   .container {
     width: 100%;
@@ -279,83 +302,9 @@ a:hover {
   }
 }
 
-/* li {
-  list-style: none;
+@media (min-width: 576px) {
+  .col-sm-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  height: 100vh;
-}
-input {
-  width: 100%;
-  padding: 10px 15px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#hint {
-  background-color: #82d1eb;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-#reset {
-  background-color: #f26012;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-#submit {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-#submit:disabled {
-  background-color: #8fb190;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: not-allowed;
-}
-
-#hint:disabled {
-  background-color: #c7e5ef;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: not-allowed;
-} */

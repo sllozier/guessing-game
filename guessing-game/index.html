@@ -9,22 +9,34 @@
     <title>Guessing Game</title>
   </head>
   <body>
+    <!-- Adding more than one class name will allow us to write less css.
+        Note how each section is wrapped in a div with an id. This allows
+        us to style the parent element to contain each section.-->
     <div id="app" class="container center overlay">
+      <!-- HEADER -->
       <div id="header">
         <h1 id="title" class="center">Guessing Game</h1>
         <h3 id="subtitle" class="center">Guess a number between 1 - 100</h3>
       </div>
+      <!-- MAIN -->
       <div id="main">
         <div id="input-parent">
           <input
             id="player-input"
             class="center"
             placeholder="Type Guess Here"
+            maxlength="3"
+            autofocus="autofocus"
           />
+          <!-- ^^maxLength controls the number of characters allowed to be
+                inputted. autofocus makes sure the cursor starts in the input
+                field -->
           <button id="submit" class="btn subBtn">Submit</button>
         </div>
       </div>
+      <!-- GUESSES -->
       <div id="guesses">
+        <!-- List items are very simple to style inline. -->
         <ul id="guess-list">
           <li class="guess">
             <a href="#" class="show-option" title="Guess will appear here">
@@ -53,6 +65,7 @@
           </li>
         </ul>
       </div>
+      <!-- BUTTONS -->
       <div id="menu-buttons">
         <button type="button" id="reset" class="btn my-btn resetBtn">
           RESET THE GAME
@@ -60,6 +73,27 @@
         <button type="button" id="hint" class="btn my-btn hintBtn">
           NEED A HINT?
         </button>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="footer" class="center">
+      <div class="row logo">
+        <div class="col-sm-4">
+          <a href="https://www.fullstackacademy.com/" target="_blank">
+            <img src="assets/fullstackAcademy.png" />
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <h4 id="prjname">
+            Created By FullStack Academy Mentors | Repo at
+            <a
+              href="https://github.com/FullstackAcademy/Foundations.DOM.Pair.Programming.GuessingGame.Solution"
+              target="_blank"
+            >
+              <img id="github" src="assets/github-mark.svg" />
+            </a>
+          </h4>
+        </div>
       </div>
     </div>
   </body>
