@@ -6,7 +6,7 @@
 <br/>
 <img width="120" src="public/guessing_game_logo.png"/>
  <br/>
-  <b><a href="#">Live Demo</a></b>
+  <b><a href="https://sllozier.github.io/guessing-game/">Live Demo</a></b>
   <br/><br/>
   </p>
 
