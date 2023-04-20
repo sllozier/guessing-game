@@ -44,8 +44,8 @@ a:hover {
 
 /***** Class Name Styling *****/
 .container {
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -159,21 +159,21 @@ a:hover {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 50px;
 }
 
-.col-sm-4 {
+/* .col-sm-4 {
   width: 155.7632px;
   min-height: 1px;
   padding-right: 45px;
   padding-left: 15px;
-}
+} */
 /***** ID styling *****/
 #header {
-  margin-top: 7rem;
+  margin-top: 4.5rem;
 }
 
 #copyright {
