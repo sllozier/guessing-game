@@ -93,7 +93,7 @@ window.onload = function () {
       hintButton.disabled = true;
       submitButton.disabled = true;
       hintOutput.textContent = "RESET THE GAME to play again!";
-      return (result.textContent = `You win! The winning number was ${winningNumber}.`);
+      return (result.textContent = `You win!`);
       //If the guess isn't correct, first check to make sure it isn't a repeat guess
       //that way, it won't count against the players maximum guesses. Change
       //title to render appropriate error message.
@@ -121,7 +121,7 @@ window.onload = function () {
         hintOutput.textContent = "RESET THE GAME to play again!";
         result.style.fontSize = "30px";
         return (result.textContent = `You Lose. 
-        The winning number was ${winningNumber}.`);
+        Winning Number: ${winningNumber}`);
         //If the player hasn't used up all of their guesses and they haven't guessed
         //the winning number, then figure out the difference between their
         //current guess and the winning number.
@@ -284,7 +284,7 @@ window.onload = function () {
     let hints = provideHint();
     playerInput.focus();
     result.style.fontSize = "30px";
-    result.textContent = `The winning number is either ${hints[0]}, ${hints[1]}, or ${hints[2]}.`;
+    result.textContent = `Your hints: ${hints[0]}, ${hints[1]}, or ${hints[2]}`;
   });
 
   //When the resetButton is clicked, gameStart function is called and that sets
