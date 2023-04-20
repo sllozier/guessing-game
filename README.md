@@ -4,7 +4,7 @@
 <i>🎮 Guessing Game will randomly generate a number from 1-100, and the player will try to guess that number in 5️⃣ attempts.</i>
 <br/> <i>🎮 Guessing Game gives you hints and lets you know if are 🔥 burning up 🔥, 🌡 lukewarm 🌡, 🏂 chilly 🏂 or 🧊 ice cold 🧊</i>
 <br/>
-<img width="120" src="game/public/guessing_game_logo.png"/>
+<img width="120" src="public/guessing_game_logo.png"/>
  <br/>
   <b><a href="#">Live Demo</a></b>
   <br/><br/>
