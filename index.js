@@ -89,7 +89,7 @@ window.onload = function () {
   const checkGuess = () => {
     //If the guess is correct, then disable our buttons and change
     //the subtitle and title to the correct values.
-    if (playersGuess === winningNumber) {
+    if (playersGuess == winningNumber) {
       hintButton.disabled = true;
       submitButton.disabled = true;
       hintOutput.textContent = "RESET THE GAME to play again!";
